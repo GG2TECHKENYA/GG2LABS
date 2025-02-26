@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - GG2 Labs</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background: #0c0c0c; color: #ddd; }
+        .navbar { background: rgba(0, 0, 0, 0.9); }
+        .navbar-brand img { height: 50px; }
+        .nav-link { color: #fff; transition: 0.3s; }
+        .nav-link:hover { color: #00d4ff; }
+
+        /* HERO SECTION */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 20px;
+            text-align: left;
+            gap: 40px;
+            flex-direction: row-reverse;
+        }
+        .hero-text {
+            flex: 1;
+        }
+        .hero-text h1 { font-size: 3rem; font-weight: bold; color: #00d4ff; }
+        .hero-text p { font-size: 1.2rem; line-height: 1.8; }
+        .hero-text .cta-btn {
+            background: #00d4ff;
+            color: #0c0c0c;
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .hero-text .cta-btn:hover { background: #0088cc; }
+        .hero-img {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+        .hero-img img, .content-img img {
+            width: 250px;  
+            height: 250px;  
+            object-fit: cover; 
+            border-radius: 50%;
+            box-shadow: 0px 0px 20px rgba(0, 212, 255, 0.5);
+        }
+
+        /* SECTION STYLING */
+        .section {
+            padding: 80px 20px;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        .section h2 { font-size: 2.5rem; margin-bottom: 20px; color: #00d4ff; }
+        .section p { font-size: 1.2rem; line-height: 1.8; }
+
+        /* RESPONSIVE LAYOUT */
+        @media (max-width: 992px) {
+            .hero, .section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-img img, .content-img img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        /* GLASSMORPHISM CARDS */
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; 
+            gap: 20px;
+            padding: 50px 20px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            width: 280px; 
+            text-align: center;
+            box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card i {
+            font-size: 3rem;
+            color: #00d4ff;
+        }
+        .card h3 {
+            margin-top: 15px;
+            font-size: 1.5rem;
+        }
+        .card p {
+            font-size: 1rem;
+            color: #bbb;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" style="font-size: 23px; font-weight: semi-bold; color: white; text-decoration: none;">
+                GG2 LABS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+
+                    <!-- Services Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="web-design.html">Web Design</a></li>
+                            <li><a class="dropdown-item" href="web-development.html">Web Development</a></li>
+                            <li><a class="dropdown-item" href="software-development.html">Software Development</a></li>
+                            <li><a class="dropdown-item" href="photography.html">Photography</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-img"><img src="wall5.jpg" alt="GG2 Labs"></div>
+        <div class="hero-text">
+            <h1>Innovating for the Future</h1>
+            <p>We specialize in crafting innovative digital solutions that drive engagement and success. Our expertise spans across web development, software solutions, and creative web design, ensuring that every project is tailored to meet unique business needs..</p>
+            <button class="cta-btn" onclick="window.location.href='contact.html';">Get Contact</button>
+        </div>
+    </section>
+
+    <!-- Second Section -->
+    <section class="section">
+        <div class="content-text">
+            <h2>Web Development</h2>
+            <p>We build fast, secure, and scalable websites that enhance user experience<br> and drive business growth. From simple landing pages<br> to complex web applications, our solutions are designed to be responsive,<br> intuitive, and performance-driven.</p>
+        </div>
+        <div class="content-img"><img src="wall4.jpg" alt="Web Development"></div>
+    </section>
+
+    <!-- Third Section -->
+    <section class="section">
+        <div class="content-img"><img src="flutter.jpeg" alt="Software Development"></div>
+        <div class="content-text">
+            <h2>Software Development</h2>
+            <p>Our custom software solutions streamline business operations<br> and improve efficiency. We develop tailored applications, integrate<br> automation tools, and optimize workflows to meet your specific requirements..</p>
+        </div>
+    </section>
+
+    <!-- Fourth Section -->
+    <section class="section">
+        <div class="content-img"><img src="wall2.jpg" alt="Software Development"></div>
+        <div class="content-text">
+            <h2>Web Design</h2>
+            <p>With a strong focus on aesthetics and functionality, we create<br> visually stunning and user-friendly designs. Our approach blends<br> creativity with the latest UI/UX principles to deliver websites<br> that are not only beautiful but also highly engaging..</p>
+        </div>
+    </section>
+    <!-- Glassmorphism Cards -->
+    <section class="cards-container">
+        <a href="photography.html" style="text-decoration: none; color: inherit;">
+            <div class="card">
+                <i class="fas fa-camera"></i>
+                <h3>Photography</h3>
+                <p>We capture high-quality images that tell your brand’s story.</p>
+            </div>
+        </a>
+        
+        <a href="web-design.html" style="text-decoration: none; color: inherit;">
+            <div class="card">
+                <i class="fas fa-code"></i>
+                <h3>Web Design</h3>
+                <p>Creative and user-friendly websites designed to boost your online presence.</p>
+            </div>
+        </a>
+        
+        <a href="software-development.html" style="text-decoration: none; color: inherit;">
+            <div class="card">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>App Development</h3>
+                <p>We build mobile applications tailored to your business needs.</p>
+            </div>
+        </a>
+        
+        <a href="web-development.html" style="text-decoration: none; color: inherit;">
+            <div class="card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Marketing</h3>
+                <p>Data-driven digital marketing strategies to grow your business.</p>
+            </div>
+        </a>
+        
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 GG2 LABS. All Rights Reserved.</p>
+        <p>Follow us: 
+            <a href="#"><i class="fab fa-facebook"></i></a> 
+            <a href="#"><i class="fab fa-twitter"></i></a> 
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

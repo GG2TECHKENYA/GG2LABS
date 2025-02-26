@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - GG2 LABS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background: #0c0c0c; color: #ddd; }
+        
+        /* Navbar */
+        .navbar { background: rgba(0, 0, 0, 0.9); }
+        .navbar-brand img { height: 50px; }
+        .nav-link { transition: 0.3s; }
+        .nav-link:hover { color: #0d6efd !important; }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://source.unsplash.com/1600x900/?technology,communication') center/cover no-repeat; 
+            color: white; padding: 160px 20px; text-align: center; 
+            position: relative;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .hero h1, .hero p {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Contact Info */
+        .contact-info p { font-size: 1.2rem; margin-bottom: 10px; }
+        .contact-info i { font-size: 1.5rem; margin-right: 10px; color: #0d6efd; }
+
+        /* Contact Form */
+        .contact-form {
+            max-width: 600px; margin: auto; background: rgba(255, 255, 255, 0.1); 
+            padding: 20px; border-radius: 10px;
+        }
+        .btn-primary {
+            background: #0d6efd; border: none; transition: 0.3s;
+        }
+        .btn-primary:hover {
+            background: #0b5ed7;
+        }
+
+        /* Social Icons */
+        .social-icons a { margin: 0 15px; font-size: 1.5rem; color: white; transition: 0.3s; }
+        .social-icons a:hover { color: #0d6efd; }
+
+        /* Footer */
+        .footer { background: #111; color: white; text-align: center; padding: 30px; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" style="font-size: 23px; font-weight: semi-bold; color: white; text-decoration: none;">
+                GG2 LABS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="web-design.html">Web Design</a></li>
+                            <li><a class="dropdown-item" href="web-development.html">Web Development</a></li>
+                            <li><a class="dropdown-item" href="software-development.html">Software Development</a></li>
+                            <li><a class="dropdown-item" href="photography.html">Photography</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+        <h1>Get in Touch</h1>
+        <p>Let’s Build the Future Together!</p>
+    </header>
+
+    <!-- Contact Details -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-info mb-5">
+                <p><i class="fas fa-map-marker-alt"></i><strong> Our Office:</strong> GG2 LABS</p>
+                <p><i class="fas fa-phone"></i><strong> Call Us:</strong> +254729857950</p>
+                <p><i class="fas fa-envelope"></i><strong> Email Us:</strong> 
+                    <a href="mailto:gg2techkenya@gmail.com" style="color: #0d6efd; text-decoration: none;">gg2techkenya@gmail.com</a>
+                </p>
+            </div>
+
+            <h2>Send Us a Message</h2>
+            <p>📝 We’d love to hear from you! Drop us a message and we’ll get back to you shortly.</p>
+            <form class="contact-form">
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" placeholder="Your Email" required>
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Social Media -->
+    <section class="text-center mt-5">
+        <h3>Let’s Connect</h3>
+        <div class="social-icons">
+            <a href="https://gg2labs.com" target="_blank" title="Visit Our Website"><i class="fas fa-globe"></i></a>
+            <a href="https://facebook.com/gg2labs" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/gg2labs" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com/company/gg2labs" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 GG2 LABS. Follow us: 
+            <a href="https://facebook.com/gg2labs" target="_blank"><i class="fab fa-facebook"></i></a> 
+            <a href="https://twitter.com/gg2labs" target="_blank"><i class="fab fa-twitter"></i></a> 
+            <a href="https://linkedin.com/company/gg2labs" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
